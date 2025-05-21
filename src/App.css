@@ -1,38 +1,62 @@
-.App {
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.landing-page {
+  position: relative; /* Position relative for absolute children */
+  overflow: hidden; /* Hide overflow from the moving background */
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack texts vertically */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  position:absolute; /* Position the background absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../public/img/UpScale.png'); /* Your image URL */
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Apply blur effect */
+  animation: moveBackground 10s infinite alternate; /* Animation */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.sliding-text {
+  opacity: 0;
+  animation: slideIn 1s forwards;
+  margin: 10px; /* Space between texts */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes moveBackground {
+  0% {
+    transform: translateZ(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateZ(-10px); /* Adjust to move background */
   }
 }
+
+.sliding-text:nth-child(1) { animation-delay: 0s; }
+.sliding-text:nth-child(2) { animation-delay: 1s; }
+.sliding-text:nth-child(3) { animation-delay: 2s; }
+.sliding-text:nth-child(4) { animation-delay: 3s; }
