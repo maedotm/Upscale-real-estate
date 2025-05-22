@@ -1,0 +1,32 @@
+.about-section {
+  background-color: #6B8E23; /* Olive green background */
+  color: #ffffff; /* White text */
+  padding: 20px; /* Reduced padding */
+  margin: 20px auto; /* Center horizontally and add margin */
+  border-radius: 10px;
+  max-width: 900px; /* Limit width to make it smaller */
+  width: 80%; /* Keep it responsive */
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s, transform 0.5s; /* Smooth transition */
+}
+
+.about-section.fade-in {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up to original position */
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up to original position */
+  }
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+}

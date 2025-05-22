@@ -1,0 +1,12 @@
+{
+  "landingTexts": [
+    "Welcome to Our Website!",
+    "Explore Our Features!",
+    "Join Us Today!",
+    "Contact Us for More Info!"
+  ],
+  "aboutUsContent": {
+    "title": "About Us",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel dolor sit amet libero tincidunt commodo. Sed vitae ligula in orci facilisis gravida. Nulla facilisi. Fusce non ligula congue, dapibus nulla id, ultrices eros. Morbi non sem sed arcu gravida aliquet."
+  }
+}

@@ -1,13 +1,18 @@
-body, html {
+body {
+  background-color: #F5F5DC; /* Light beige background */
+  color: #000000; /* Black text color */
   margin: 0;
-  padding: 0;
-  height: 100%;
+  font-family: Arial, sans-serif; /* Clean font */
+}
+
+.app-container {
+  overflow: auto; /* Enable scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 .landing-page {
   position: relative; /* Position relative for absolute children */
-  overflow: hidden; /* Hide overflow from the moving background */
-  height: 100vh;
+  height: 100vh; /* Full height for the landing page */
   display: flex;
   flex-direction: column; /* Stack texts vertically */
   justify-content: center;
@@ -15,10 +20,11 @@ body, html {
   color: white;
   font-size: 2rem;
   text-align: center;
+  background-color: #6B8E23; /* Olive green background */
 }
 
 .background {
-  position:absolute; /* Position the background absolutely */
+  position: absolute; /* Position the background absolutely */
   top: 0;
   left: 0;
   right: 0;
@@ -28,6 +34,26 @@ body, html {
   background-position: center;
   filter: blur(3px); /* Apply blur effect */
   animation: moveBackground 10s infinite alternate; /* Animation */
+}
+
+.content-container {
+  height: 50vh; /* Full height for the content section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  text-align: center; /* Center text */
+  padding: 20px;
+}
+
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up to original position */
+  }
 }
 
 .sliding-text {
@@ -42,21 +68,7 @@ body, html {
     opacity: 0;
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
-@keyframes moveBackground {
-  0% {
-    transform: translateZ(0);
-  }
-  100% {
-    transform: translateZ(-10px); /* Adjust to move background */
-  }
-}
-
-.sliding-text:nth-child(1) { animation-delay: 0s; }
-.sliding-text:nth-child(2) { animation-delay: 1s; }
-.sliding-text:nth-child(3) { animation-delay: 2s; }
-.sliding-text:nth-child(4) { animation-delay: 3s; }
