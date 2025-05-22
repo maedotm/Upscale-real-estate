@@ -1,7 +1,7 @@
 import React from 'react';
-import './css/aboutUs.css'; // Ensure this file exists
+import './css/aboutUs.css'; // Use the same styles
 
-const AboutUs = ({ title, description }) => {
+const ContactUs = ({ title, description }) => {
   return (
     <div className="about-section fade-in">
       <h2>{title}</h2>
@@ -10,4 +10,4 @@ const AboutUs = ({ title, description }) => {
   );
 };
 
-export default AboutUs;
+export default ContactUs;

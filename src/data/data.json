@@ -7,6 +7,10 @@
   ],
   "aboutUsContent": {
     "title": "About Us",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel dolor sit amet libero tincidunt commodo. Sed vitae ligula in orci facilisis gravida. Nulla facilisi. Fusce non ligula congue, dapibus nulla id, ultrices eros. Morbi non sem sed arcu gravida aliquet."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Cras venenatis euismod malesuada."
+  },
+  "contactUsContent": {
+    "title": "Contact Us",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula, justo in aliquam facilisis, sapien ligula lobortis libero, ut fermentum nunc nunc ac nulla."
   }
 }
