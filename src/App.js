@@ -20,12 +20,17 @@ const App = () => {
   }, []);
 
   const handleSwitchSection = (direction) => {
-    setCurrentSection((prev) => (direction === 'next' ? (prev + 1) % sections.length : (prev - 1 + sections.length) % sections.length));
+    setCurrentSection((prev) => 
+      direction === 'next' 
+        ? (prev + 1) % sections.length 
+        : (prev - 1 + sections.length) % sections.length
+    );
   };
 
   return (
     <div className="app-container">
       <div className="landing-page">
+        <div className="background"></div> {/* Background div added here */}
         {landingTexts.map((text, index) => (
           <div key={index} className="sliding-text">
             {text}
